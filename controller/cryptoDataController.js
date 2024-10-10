@@ -1,8 +1,9 @@
 import cryptoModel from '../models/cryptoDataModel.js';
+import logger from '../utils/logger.js';
 
 // Validate if coin_id is present in param or not
 
-export const getStats = async (req, res) => {
+export const getCryptoStats = async (req, res) => {
   const { coin_id } = req.params;
 
   // Additionaly i have created Middleware to check coin_id is present or not

@@ -1,6 +1,6 @@
 import express from 'express';
-import { getCryptoStats, getDeviation } from '../controllers/cryptoController.js';
-import validateCoinId from '../utils/validateId.js';
+import { getCryptoStats, getDeviation } from '../controller/cryptoDataController.js';
+import validateCoinId from '../middlewares/validateId.js';
 
 const router = express.Router();
 

@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 // Function to fetch cryptocurrency data and save it to MongoDB
-export const fetchCryptoData = async () => {
+const fetchCryptoData = async () => {
   const coins = ['bitcoin', 'matic-network', 'ethereum'];
 
   try {
@@ -42,3 +42,4 @@ export const fetchCryptoData = async () => {
     logger.error('Error fetching data:', error);
   }
 };
+export default fetchCryptoData;
