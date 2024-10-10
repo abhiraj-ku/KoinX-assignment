@@ -1,0 +1,30 @@
+name: KoinX backend deployment pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: self-hosted
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - name: checkout code repository
+        uses: actions/setup-node@v3
+        with:
+          cache: 'npm'
+
+      - name: install dependencies
+        run: npm ci
+
+      - name: create env file
+        run: |
+          touch .env
+           echo "${{secrets.PROD_ENV_FILE}}" > .env
+
+      - name: start server on EC2 with pm2
+        run: pm2 restart KoinX-backend
