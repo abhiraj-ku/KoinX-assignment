@@ -15,13 +15,3 @@ process.on('SIGINT', () => {
     process.exit(1);
   });
 });
-
-// Gracefully close the server on SIGINT (Ctrl+z)
-process.on('SIGTERM', () => {
-  logger.info(`SIGINT signal received, closing the server...`);
-
-  server.close(() => {
-    console.log(`Closed the HTTP server gracefully.`);
-    process.exit(1);
-  });
-});
