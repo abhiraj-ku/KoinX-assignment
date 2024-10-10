@@ -2,6 +2,8 @@
 
 A simple Node.js application that tracks cryptocurrency prices, market capitalization, and 24-hour changes for Bitcoin, Matic, and Ethereum. This application fetches data from the CoinGecko API and stores it in MongoDB for easy retrieval.
 
+### The application is live and can be accessed [crypto Tracker api](https://koinx-assignment-1rip.onrender.com/).
+
 ## Features
 
 - Fetch and store cryptocurrency data every two hours.
@@ -49,6 +51,9 @@ npm run dev
 ## Routes
 
 ### Get Latest Stats for a Cryptocurrency
+
+- To see [live](https://koinx-assignment-1rip.onrender.com/) just open the url and `/api/v1/ ` and any path stats or deviation
+  with params bitcoin, matic-network, ethereum
 
 - **Endpoint:** `/stats/:coin_id`
 - **Method:** GET
