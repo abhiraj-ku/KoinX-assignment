@@ -7,19 +7,29 @@
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "nodejs",
+    "crypto-tracker",
+    "crypto"
+  ],
+  "author": "Abhishek Kumar",
   "license": "ISC",
-  "description": "",
+  "description": "This is a crypto tracker made using node js ",
   "dependencies": {
     "axios": "^1.7.7",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
+    "express-rate-limit": "^7.4.1",
+    "express-validator": "^7.2.0",
     "mongoose": "^8.7.1",
+    "morgan": "^1.10.0",
     "node-cron": "^3.0.3",
     "winston": "^3.15.0"
   },
   "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/morgan": "^1.9.9",
+    "@types/node-cron": "^3.0.11",
     "nodemon": "^3.1.7"
   }
 }

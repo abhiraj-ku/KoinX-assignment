@@ -58,7 +58,7 @@ app.use(
 // Schedule the job to run every 2 hours
 cron.schedule('0 */2 * * *', fetchCryptoData);
 
-// Root route
+// Root route for Helmet config
 app.get('/', (req, res) => {
   // Include nonce in the inline script for demonstration
   res.send(`
